@@ -21,6 +21,8 @@
         --background-library: #242424;
         --width--lateral: 320px;
         --background-navegation: #0000006d;
+        --main-color: #1e1e1ee8;
+            
     }
     body{
         height: 100%;
@@ -37,8 +39,14 @@
         line-height: 1.5;
         background-color: var(--light-green-principal); 
     }
-    aside{
+
+    #left{
         flex: 0 0 var(--width--lateral);
+        position: sticky;
+        
+    }
+    .sidebar{
+        height: calc(100vh - 79px);
     }
     .options{
         
@@ -264,7 +272,11 @@
       max-width: calc(100% - var(--width--lateral) - 40px); 
       overflow: hidden;
     }
+    .separacao{
+        background-color: var(--main-color) ;
+    }
     .header-main{
+        position: relative;
         width: 100%;
         height: 64px;
         background-color: var(--background-secundario);
@@ -272,7 +284,8 @@
         padding: 10px;
         margin: 12px auto auto auto;
         justify-content: space-between;
-        border-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
     .navegation{
         gap: 8px;
@@ -344,11 +357,14 @@
         margin-left: 7px;
         margin-right: 7px;
         justify-content: space-between;
+        margin-bottom: 10px;
         cursor: pointer;
         display: flex;
         align-items: center;
-        position: relative;
-        z-index: 1;
+        position: fixed;
+        z-index: 1000;
+        bottom: 0;
+       
         gap: 24px;
         padding: 11px 24px 7px 15px;
         width: 100%;
@@ -384,6 +400,108 @@
     .button-footer:hover{
         scale: 1.1;
     }
+    
+/* ------- Fileira de albuns e musicas - inicio ------- */
+.principal{
+    max-width: auto;
+    max-height: auto; /* Altura máxima do conteúdo */
+    overflow-y: auto; /* Habilita scroll vertical */
+    padding-right: 20px; 
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+p,
+p strong {
+    background-color: transparent;
+}
+#fileira,
+#fileira02 {
+    padding: 16px;
+    color: aliceblue;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.mostrar-tudo,
+.mostrar-tudo02 {
+    text-align: end;
+}
+
+.mostrar-tudo:hover,
+.mostrar-tudo02:hover {
+    text-decoration: underline;
+}
+
+.titulos:hover,
+.titulos02:hover {
+    text-decoration: underline;
+}
+
+.artistas,
+.artistas02 {
+    display: flex;
+    text-align: left;
+    padding: 10px;
+}
+
+.artista,
+.artista02 {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.artista02 {
+    padding: 8px;
+}
+
+.artista:hover,
+.artista02:hover {
+    background-color: rgba(185, 185, 192, 0.075);
+    transition: 0.5s;
+}
+
+#fileira02 img {
+    border-radius: 50%;
+    max-width: 400px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+#fileira img {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* botao player */
+.artista02,
+.artista {
+    position: relative;
+}
+
+.artista02 .player,
+.artista .player {
+    position: absolute;
+    top: 40%;
+    left: 57%;
+    opacity: 0;
+    background-color: transparent;
+}
+
+.artista02:hover .player,
+.artista:hover .player {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.player:hover {
+    scale: 110%;
+}
+/* ------- Fileira de albuns e musicas - fim ------- */
+
     @media (max-width: 768px) {
         aside {
             height: 100%;
