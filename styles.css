@@ -306,6 +306,10 @@
         font-weight: 700;
         font-size: medium;
     }
+    #inscrever-button a{
+        text-decoration: none;
+        color: inherit;
+    }
     #inscrever-button:hover{
         transform: scale(1.04);
         color: var(--text-colordestaque, #000000);
@@ -324,6 +328,10 @@
         transition: 0.2ms;
         font-weight: bold;
         font-size: 100%;
+    }
+    #button-entrar a{
+        text-decoration: none;
+        color: inherit;
     }
     #button-entrar:hover{
         scale: 1.1;

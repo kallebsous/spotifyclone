@@ -1,0 +1,144 @@
+@font-face {
+    font-family: spotify;
+    src: url('../assets/fonts/GothamMedium.ttf') format('Truetype');
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: spotify;
+    margin: 0;
+}
+.container {
+    background-color: #000;
+    padding: 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+}
+.logo img {
+    width: 50px;
+}
+
+.title {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.social-buttons a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    
+}
+.social-buttons a img{
+    margin: 0 15px 0 0;
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #a7a7a7;
+    margin: 0 10px;
+}
+
+.or-divider span {
+    font-size: 16px;
+    color: #fff;
+}
+.social-buttons a:hover {
+    background-color: #333;
+}
+.input-group {
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+}
+.input-group a{
+    color: #1db954;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    font-size: 16px;
+    background: none;
+    color: white;
+    margin-bottom: 8px;
+}
+.input-group .remember {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.input-group .remember input {
+    margin-right: 10px;
+}
+.btn {
+    background-color: #1db954;
+    color: #000 ;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+.btn a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn:hover {
+    background-color: #1aa34a;
+}
+.footer {
+    margin-top: 20px;
+}
+.footer a {
+    color: #fff;
+}
+
+.divisor{
+    margin: 32px 10px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    border-top: 1px solid rgb(41, 41, 41);
+}
